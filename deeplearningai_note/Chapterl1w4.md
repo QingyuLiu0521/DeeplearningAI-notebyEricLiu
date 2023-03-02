@@ -104,8 +104,7 @@
          ```
          - Output:`AL, caches`，`AL`为最终输出，`caches`为包含所有`cache`的np.ndarray
    3. Compute Cost
-      
-      $$J = -\frac{1}{m} \sum\limits_{i = 1}^{m} (y^{(i)}\log\left(a^{[L] (i)}\right) + (1-y^{(i)})\log\left(1- a^{[L](i)}\right))$$
+      $$J = -\frac{1}{m} \sum\limits_{i = 1}^{m}(y^{(i)}\log\left(a^{[L] (i)}\right) + (1-y^{(i)})\log\left(1- a^{[L](i)}\right))$$
       - Input: `AL, Y`
       - Core Code:
       ```py
@@ -129,7 +128,6 @@
          ```
          - Output:`dA_prev, dW, db`
       2. Linear-Activation Backward:
-         
          $$dZ^{[l]} = dA^{[l]} * g'(Z^{[l]})$$. 
          - Input: `dA, cache = (linear_cache, activation_cache), activation = "relu"or"sigmoid"`
          - Core Code:
@@ -161,8 +159,8 @@
          ```
          - Output: `grads`
    5. Update Parameters
-      
       $$ W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} $$
+      
       $$ b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} $$
       - Input: `parameters, grads, learning_rate`
       - Core Code:
