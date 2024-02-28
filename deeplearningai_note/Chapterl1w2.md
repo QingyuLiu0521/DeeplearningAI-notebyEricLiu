@@ -77,7 +77,7 @@
 
    $dZ = A - Y$
 
-   ${{dw} = \frac{1}{m}*X*dz^{T}\ }$
+   ${dw} = \frac{1}{m}*X*dz^{T}$
 
    $db= \frac{1}{m}*np.sum( dZ)​$
 
