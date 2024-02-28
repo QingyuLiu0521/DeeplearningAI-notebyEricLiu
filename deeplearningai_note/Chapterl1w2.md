@@ -20,7 +20,7 @@
    2. $y$：训练集的实际值
    3. $w、b$：参数
    4. $m$：样本数
-   5. Output function：$\hat{y}=\sigma{({{w}^{T}}{{x}^{(i)}}+b)}$, where $\sigma{(z)} = \frac{1}{1+e^{-z}}$
+   5. Output function: $\hat{y}=\sigma{({{w}^{T}}{{x}^{(i)}}+b)}$, where $\sigma{(z)} = \frac{1}{1+e^{-z}}$
    6. Loss function：$$L\left( \hat{y},y \right)=-y\log(\hat{y})-(1-y)\log (1-\hat{y})$$损失函数衡量算法在单个训练样本中表现，**通过训练改变参数$w、b$进而改变预测值$\hat{y}$，让损失函数的值越小越好**
    7. Cost function:$$J\left( w,b \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{L\left( {{{\hat{y}}}^{(i)}},{{y}^{(i)}} \right)}=\frac{1}{m}\sum\limits_{i=1}^{m}{\left( -{{y}^{(i)}}\log {{{\hat{y}}}^{(i)}}-(1-{{y}^{(i)}})\log (1-{{{\hat{y}}}^{(i)}}) \right)}$$代价函数衡量算法在全部训练样本上的表现；通过训练代价函数最终得到参数$w$和参数$b$
 4. Gradiant descent algorithm(梯度下降法)
